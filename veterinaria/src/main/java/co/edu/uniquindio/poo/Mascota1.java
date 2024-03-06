@@ -6,6 +6,7 @@ public record Mascota1(String numeroId, String nombre, String especie, String ra
      * 
      */
     public Mascota1 {
+        
 
         assert numeroId != null && !numeroId.isBlank() : "El numero de identificacion debe ser diferente de null";
         assert nombre != null && !nombre.isBlank() :"El nombre debe ser diferente de null";
@@ -20,6 +21,7 @@ public record Mascota1(String numeroId, String nombre, String especie, String ra
        
     }
 
+   
 
     
 }

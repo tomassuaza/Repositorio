@@ -12,25 +12,14 @@ import org.junit.jupiter.api.Test;
 public class VeterinariaTest {
     private static final Logger LOG = Logger.getLogger(VeterinariaTest.class.getName());
 
+
+
     @Test
-
-    public void datosCompletos (){
-        LOG.info("Inicio datosCompletos");
-
-
-        Mascota1 mascota = new Mascota1("1109198124", "Toby", "Perro", "Pitbull", 4, "macho", "cafe", 9);
-
-
-        assertEquals("1109198124", mascota.numeroId());
-        assertEquals("Toby", mascota.nombre());
-        assertEquals("Perro", mascota.especie());
-        assertEquals("Pitbull", mascota.raza());
-        assertEquals(4, mascota.edad());
-        assertEquals("macho", mascota.genero());
-        assertEquals("cafe", mascota.color());
-        assertEquals(9, mascota.peso());
-
-
+    public void datosCompletos(){
+        LOG.info("Inicio Prueba datos completos");
+        Veterinaria veterinaria = new Veterinaria("Amigos Peludos");
+        assertEquals("Amigos Peludos", veterinaria.getNombre());
+        LOG.info("Fin de la prueba datos completos");
     }
 
     @Test
@@ -53,11 +42,12 @@ public class VeterinariaTest {
 
     @Test
     public void datosNulos(){
-        LOG.info("Inicio datosNulos");
-        assertThrows(Throwable.class, ()-> new Veterinaria(null));
-        LOG.info("Finalizacion datosNulos");
-
+        //LOG.info("Inicio Prueba datos nulos");
+        assertThrows(Throwable.class,()-> new Veterinaria(null));
+        //LOG.info("Fin de la prueba datos nulos");
     }
+
+    
 
 
     @Test
@@ -67,7 +57,7 @@ public class VeterinariaTest {
         Veterinaria veterinaria = new Veterinaria("Amigos peludos");
         Mascota1 mascota1 = new Mascota1("1109198124", "Toby", "Perro", "Pitbull", 4, "macho", "cafe", 9);
         veterinaria.agregarMascota(mascota1);
-        Mascota1 mascota2 = new Mascota1("1109876189", "Lucas", "Perro", "Pincher", 6, "macho", "gris", 5);
+        Mascota1 mascota2 = new Mascota1("1109198124", "Lucas", "Perro", "Pincher", 6, "macho", "gris", 5);
         veterinaria.agregarMascota(mascota2);
         LOG.info("Finalizacion agregarMascotaRepetida");
     }
