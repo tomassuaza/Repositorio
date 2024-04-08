@@ -1,23 +1,21 @@
 package co.edu.uniquindio.poo;
+import co.edu.uniquindio.poo.figuras.FiguraGeometrica;
 
-public class Zonas {
+public abstract class Zonas {
 
 
     private final String nombre;
     public final Material materialUtlizado;
-    private double metrosCuadradosUtilizados;
-    
+    public final FiguraGeometrica figuraGeometrica;
 
-    public Zonas ( String nombre, Material material, double metrosCuadradosUtilizados){
+    public Zonas ( String nombre, Material material, FiguraGeometrica figuraGeometrica){
         this.nombre = nombre;
         this.materialUtlizado = material;
-        this.metrosCuadradosUtilizados = metrosCuadradosUtilizados;
+        this.figuraGeometrica = figuraGeometrica;
 
     }
 
 
-    
-    
     public Material getMaterial() {
         return materialUtlizado;
     }
@@ -31,7 +29,7 @@ public class Zonas {
 
 
       public double calcularValorTotal() {
-        return materialUtlizado.calcularValorTotal(metrosCuadradosUtilizados);
+        return materialUtlizado.getMetroCuadrado() * figuraGeometrica.calcularArea() ;
     }
 
 

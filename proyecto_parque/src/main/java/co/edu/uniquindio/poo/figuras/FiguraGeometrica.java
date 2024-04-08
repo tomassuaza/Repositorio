@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.figuras;
 
-abstract class  FiguraGeometrica {
+public abstract class  FiguraGeometrica {
 
     public abstract Double calcularArea();
 
