@@ -42,9 +42,9 @@ public class VeterinariaTest {
 
     @Test
     public void datosNulos(){
-        //LOG.info("Inicio Prueba datos nulos");
+        LOG.info("Inicio Prueba datos nulos");
         assertThrows(Throwable.class,()-> new Veterinaria(null));
-        //LOG.info("Fin de la prueba datos nulos");
+        LOG.info("Fin de la prueba datos nulos");
     }
 
     
@@ -65,3 +65,4 @@ public class VeterinariaTest {
    
    
 }
+
