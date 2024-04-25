@@ -7,9 +7,12 @@
  */
 package co.edu.uniquindio.poo;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
+
+import co.edu.uniquindio.poo.figuras.Circulo;
 
 /**
  * Unit test for simple App.
@@ -21,9 +24,10 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue() {
-        LOG.info("Iniciado test shouldAnswerWithTrue");
-        assertTrue(true);
-        LOG.info("Finalizando test shouldAnswerWithTrue");
+    public void areaCirculoPositivo() {
+        LOG.info("Iniciado test");
+        Circulo circulo = new Circulo(10.0);
+        assertEquals(314.159, circulo.calcularArea(), 0.005);
+        LOG.info("Finalizando test");
     }
 }

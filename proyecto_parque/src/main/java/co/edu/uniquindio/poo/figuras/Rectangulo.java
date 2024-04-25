@@ -21,5 +21,15 @@ public class Rectangulo extends FiguraGeometrica {
     }
 
 
+    public double getAncho() {
+        return ancho;
+    }
+
+
+    public double getAlto() {
+        return alto;
+    }
+
+
 
 }

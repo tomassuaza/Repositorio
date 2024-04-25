@@ -5,13 +5,13 @@ public class Circulo extends FiguraGeometrica {
     public Double radio;
     public final Double PI = 3.14;
     
-    public Circulo(Double raido){
-       validarMedida(raido);
-       this.radio = raido;
+    public Circulo(Double radio){
+       validarMedida(radio);
+       this.radio = radio;
     }
 
     public Double calcularArea() {
-        return PI * Math.sqrt(radio);
+        return Math.PI * radio *radio;
     }
 
 }
