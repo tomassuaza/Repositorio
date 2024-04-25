@@ -36,7 +36,7 @@ public class Proyecto {
     }
 
     public List<Parque> getParques(String nombreMunicipio) {
-
+    
         return parques.stream().filter(parque -> parque.municipio.getNombre().equals(nombreMunicipio.toUpperCase()))
                 .toList();
 
