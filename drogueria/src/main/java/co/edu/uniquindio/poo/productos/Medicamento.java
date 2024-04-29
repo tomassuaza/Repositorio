@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.productos;
 
 public class Medicamento extends Producto {
 
@@ -19,6 +19,12 @@ public class Medicamento extends Producto {
     public double getDosis() {
         return dosis;
     }
+
+    public int getStock() {
+        return stock;
+    }
+
+
 
 
 
