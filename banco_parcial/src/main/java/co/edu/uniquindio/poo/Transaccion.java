@@ -83,8 +83,8 @@ public class Transaccion {
             boolean envioEncontrado = false;
             boolean recibeEncontrado = false;
 
-        
-            for (CuentaBancaria cuenta : Banco.getListaCuentaBancarias()) {
+        Banco banco = new Banco("Bancolombia");
+            for (CuentaBancaria cuenta : banco.getListaCuentaBancarias()) {
                 if (cuenta.getNumeroCuenta().equals(cuentaQueEnvia) && cuenta.isEstado()) {
                     envioEncontrado = true;
                     int saldoAnterior = cuenta.getSaldo();

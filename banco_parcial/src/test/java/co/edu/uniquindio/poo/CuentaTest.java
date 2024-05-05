@@ -72,8 +72,9 @@ public class CuentaTest {
     @Test
     public void agregarSaldoNegativo() {
         LOG.info("inico test");
+        Banco banco = new Banco("Bancolombia");
         CuentaBancaria cuentaBancaria = new Corriente("juan", "lopez", "109902543", 0);
-        Banco.agregarCuenta(cuentaBancaria);
+        banco.agregarCuenta(cuentaBancaria);
         assertThrows(Throwable.class, () -> cuentaBancaria.depositar(-50000)); 
         LOG.info("fin test");
 }

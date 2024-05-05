@@ -5,23 +5,23 @@ import java.util.LinkedList;
 
 public class Banco {
      private final String nombre;
-    private  static Collection<CuentaBancaria> listaCuentaBancarias;
+    private  Collection<CuentaBancaria> listaCuentaBancarias;
 
     public Banco(String nombre) {
         this.nombre = nombre;
-        Banco.listaCuentaBancarias = new LinkedList<CuentaBancaria>();
+        this.listaCuentaBancarias = new LinkedList<CuentaBancaria>();
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public static Collection<CuentaBancaria> getListaCuentaBancarias() {
+    public  Collection<CuentaBancaria> getListaCuentaBancarias() {
         return listaCuentaBancarias;
     }
 
     public void setListaCuentaBancarias(Collection<CuentaBancaria> listaCuentaBancarias) {
-        Banco.listaCuentaBancarias = listaCuentaBancarias;
+        this.listaCuentaBancarias = listaCuentaBancarias;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Banco {
         return "Banco [nombre=" + nombre + ", listaCuentaBancarias=" + listaCuentaBancarias + "]";
     }
 
-    public static void agregarCuenta(CuentaBancaria cuenta) {
+    public  void agregarCuenta(CuentaBancaria cuenta) {
         listaCuentaBancarias.add(cuenta);
     }
 

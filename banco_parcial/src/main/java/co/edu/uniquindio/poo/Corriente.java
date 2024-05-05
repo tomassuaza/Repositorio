@@ -44,12 +44,6 @@ public class Corriente extends CuentaBancaria{
 
     }
 
-    public static void crearCuentaCorriente(String nombreTitularField, String apellidoField,
-    String numeroCuentaField, int sobregiro) {
-        Corriente cuentaCorriente = new Corriente(nombreTitularField, apellidoField, numeroCuentaField, sobregiro);
-        Banco.agregarCuenta(cuentaCorriente);
-
-    }
 
 
      
